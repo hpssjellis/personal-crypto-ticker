@@ -1,5 +1,5 @@
 
-<h6>Version 1.0.2</h6>
+<h6>Version 1.0.3</h6>
 Update ~Jan 2022
 
 <h2 align=center> Personal Cryptocurrency Ticker</h2>
@@ -170,10 +170,11 @@ document.getElementById('myG2').value = myLocalG2
 
 
 
-
+//https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin
 //https://api.coindesk.com/v1/
 
-let urlA2 = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=cad';
+//let urlA2 = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=cad';
+let urlA2 = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin';
 
 
 fetch(urlA2, { mode: 'no-cors'})
