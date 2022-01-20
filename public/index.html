@@ -1,5 +1,5 @@
 
-<h6>Version 1.0.3</h6>
+<h6>Version 1.0.4</h6>
 Update ~Jan 2022
 
 <h2 align=center> Personal Cryptocurrency Ticker</h2>
@@ -181,11 +181,11 @@ fetch(urlA2, { mode: 'no-cors'})
 .then(res => res.json())
 .then((out) => {
 
-let myCoinCost = parseFloat(out[0]['price_cad']).toFixed(0)  // 0 for bitcoin
-let my24h = out[0]['24h_volume_cad']
+let myCoinCost = parseFloat(out[0]['current_price']).toFixed(0)  // 0 for bitcoin
+let my24h = out[0]['total_volume']
 
 let myChange1h = out[0]['percent_change_1h']
-let myChange24h = out[0]['percent_change_24h']
+let myChange24h = out[0]['price_change_percentage_24h']
 let myChange7d = out[0]['percent_change_7d']
 
 if (my24h > 0){
