@@ -1,5 +1,5 @@
 
-<h6>Version 1.0.7</h6>
+<h6>Version 1.0.8</h6>
 Update ~Jan 2022
 
 <h2 align=center> Personal Cryptocurrency Ticker</h2>
@@ -185,6 +185,8 @@ fetch(urlA2, { mode: 'no-cors'})
 let myCoinCost = parseFloat(out[0]['current_price']).toFixed(0)  // 0 for bitcoin
 let my24h = out[0]['total_volume']
 
+                                                                  
+/*
 let myChange1h = out[0]['percent_change_1h']
 let myChange24h = out[0]['price_change_percentage_24h']
 let myChange7d = out[0]['percent_change_7d']
@@ -207,6 +209,8 @@ myVolOut = ''
 } else {myVolOut = 'No data'}
 
 document.getElementById('myA8').value = myVolOut
+                                                                  
+                                                                  */
 
 document.getElementById('myA5').value = myCoinCost
 document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)  ).toFixed(2)
