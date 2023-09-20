@@ -150,14 +150,17 @@ document.getElementById('myA8').value = myVolOut
 
 myGrab = async function(){                                                             
   let myNewData = await getRecentPrices()
+  let myUseable = JSON.parse(myNewData)
   myJsonData = JSON.stringify( myNewData, null, null)
   document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')
-  document.getElementById('myA5').value = myJsonData[0].data
-  document.getElementById('myA7').value = myNewData[0].data
+  document.getElementById('myA5').value = myUseable.data
+  document.getElementById('myA7').value = myUseable.data.id
   console.log('myNewData')
   console.log(myNewData)
   console.log('myJsonData')
   console.log(myJsonData)
+  console.log('myUseable')
+  console.log(myUseable)
 } 
 
 
