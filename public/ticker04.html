@@ -7,6 +7,12 @@
 <!--<input id="showTicker" type="button" value="Recent prices" onclick="getRecentPrices()">  -->
 
 <script>
+
+// globals
+  let myUsdToCad = 0;
+
+
+  
   async function getRecentPrices() {
     try {
       const url = 'https://api.coincap.io/v2/assets/bitcoin';
@@ -32,6 +38,7 @@
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
+      myUsdToCad = data.data.rateUsd
       console.log('data.data.rateUsd');
       console.log(data.data.rateUsd);
       return data
@@ -114,12 +121,14 @@ document.getElementById('myA2').value = myLocalA2
 
 myGrab = async function(){                                                             
   let myNewData = await getRecentPrices()
+  console.log('myNewData.data.priceUsd')
+  console.log(myNewData.data.priceUsd)
   myJsonData = JSON.stringify( myNewData, null, null)
   let myUseable = JSON.parse(myJsonData)
   document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')   // show all data
 //  document.getElementById('myA5').value = myUseable.data.name
  // document.getElementById('myA7').value = myUseable.data.priceUsd
-  let myCoinCost = parseFloat(myUseable.data.priceUsd).toFixed(0)
+  let myCoinCost = (parseFloat(myUseable.data.priceUsd) * parseFloat(myUsdToCad)).toFixed(0)
   document.getElementById('myA5').value = myCoinCost
   let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
   document.getElementById('myA8').value = my24h
