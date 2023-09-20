@@ -87,6 +87,24 @@ document.getElementById('myA2').value = myLocalA2
 
 <input id="showTicker" type=button value="Recent prices" onclick="{
 
+myGrab = async function(){                                                             
+  let myNewData = await getRecentPrices()
+  myJsonData = JSON.stringify( myNewData, null, null)
+  let myUseable = JSON.parse(myJsonData)
+  document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')
+  document.getElementById('myA5').value = myUseable.data.name
+  document.getElementById('myA7').value = myUseable.data.priceUsd
+  console.log('myNewData')
+  console.log(myNewData)
+ // console.log('myJsonData')
+//  console.log(myJsonData)
+//  console.log('myUseable')
+ // console.log(myUseable)
+} 
+
+
+
+myGrab()
 
 
 
@@ -148,24 +166,6 @@ document.getElementById('myA8').value = myVolOut
 //.catch(err => { throw err });
 
 
-myGrab = async function(){                                                             
-  let myNewData = await getRecentPrices()
-  myJsonData = JSON.stringify( myNewData, null, null)
-  let myUseable = JSON.parse(myJsonData)
-  document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')
-  document.getElementById('myA5').value = myUseable.data.name
-  document.getElementById('myA7').value = myUseable.data.priceUsd
-  console.log('myNewData')
-  console.log(myNewData)
- // console.log('myJsonData')
-//  console.log(myJsonData)
-//  console.log('myUseable')
- // console.log(myUseable)
-} 
-
-
-
-myGrab()
 
 
 
