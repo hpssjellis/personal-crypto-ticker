@@ -92,8 +92,12 @@ myGrab = async function(){
   myJsonData = JSON.stringify( myNewData, null, null)
   let myUseable = JSON.parse(myJsonData)
   document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')
-  document.getElementById('myA5').value = myUseable.data.name
-  document.getElementById('myA7').value = myUseable.data.priceUsd
+//  document.getElementById('myA5').value = myUseable.data.name
+ // document.getElementById('myA7').value = myUseable.data.priceUsd
+  let myCoinCost = parseFloat(myUseable.data.priceUsd).toFixed(0)
+  document.getElementById('myA5').value = myCoinCost
+  let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
+  document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)  ).toFixed(2)
   console.log('myNewData')
   console.log(myNewData)
  // console.log('myJsonData')
