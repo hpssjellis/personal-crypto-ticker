@@ -152,8 +152,8 @@ myGrab = async function(){
   let myNewData = await getRecentPrices()
   myJsonData = JSON.stringify( myNewData, null, null)
   document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, '<br>')
-  document.getElementById('myA5').value = myJsonData.data
-  document.getElementById('myA7').value = myNewData.data
+  document.getElementById('myA5').value = myJsonData[0].data
+  document.getElementById('myA7').value = myNewData[0].data
   console.log('myNewData')
   console.log(myNewData)
   console.log('myJsonData')
