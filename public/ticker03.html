@@ -1,4 +1,4 @@
-<h6></h6>Verison 1.0.6</h6>
+<h6></h6>Verison 1.0.7</h6>
 
 2023 A better site is <a href="https://coincap.io">coincap.io</a> <br>
 
@@ -16,6 +16,7 @@
       }
       const data = await response.json();
       console.log(data);
+      document.getElementById('myDiv04').innerHTML =  data
       return data
     } catch (error) {
       console.error('An error occurred:', error);
@@ -141,7 +142,7 @@ document.getElementById('myA8').value = myVolOut
 //document.getElementById('myCheck').click()   //do the math again until correct
 
 let myNewData = getRecentPrices()
-document.getElementById('myDiv04').innerHTML =  myNewData
+//document.getElementById('myDiv04').innerHTML =  myNewData
 
 
 //})
