@@ -1,4 +1,4 @@
-<h6></h6>Verison 1.0.5</h6>
+<h6></h6>Verison 1.0.6</h6>
 
 2023 A better site is <a href="https://coincap.io">coincap.io</a> <br>
 
@@ -140,8 +140,8 @@ document.getElementById('myA8').value = myVolOut
 //document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)  ).toFixed(2)
 //document.getElementById('myCheck').click()   //do the math again until correct
 
-let myNewData = getRecentPrices()
-document.getElementById('myDiv04').innerHTML =   JSON.stringify(myNewData, null, '<br>')
+let myNewData = await getRecentPrices()
+document.getElementById('myDiv04').innerHTML =   JSON.stringify(myNewData, null, 2)
 
 
 //})
