@@ -131,6 +131,9 @@ myGrab = async function(){
   let myCoinCost = (parseFloat(myUseable.data.priceUsd) / parseFloat(myUsdToCad)).toFixed(0)
   document.getElementById('myA5').value = myCoinCost
   let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
+  let myVwap24Hr =  parseFloat(myUseable.data.vwap24Hr)     volumeUsd24Hr
+  let myChange24percent =  parseFloat(myUseable.data.changePercent24Hr)     
+
   document.getElementById('myA8').value = my24h
   document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)).toFixed(2)
   console.log('myNewData')
@@ -218,7 +221,7 @@ document.getElementById('myA8').value = myVolOut
 
 
 <table border=1 width="100%">
-<tr><td>Symbol</td><td>Scary Vol</td><td>Original #</td><td>Original Price $ </td><td>Ori. Cost $ CDN</td><td>Profit/Loss CDN</td><td>Present Price $ CDN</td><td>Ask #</td><td>Value $ CDN</td><td>Vol/Scary%  &#9651;[7D% : 24H% : 1H%]</td><td>Cyrpto</td></tr>
+<tr><td>Symbol</td><td>Concern Vol</td><td>Original #</td><td>Original Price $ </td><td>Ori. Cost $ CDN</td><td>Profit/Loss CDN</td><td>Present Price $ CDN</td><td>Ask #</td><td>Value $ CDN</td><td>Vol/Scary%  &#9651;[24H% ] vwap24Hr</td><td>Cyrpto</td></tr>
 
 
 
