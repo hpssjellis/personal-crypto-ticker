@@ -132,9 +132,31 @@ myGrab = async function(){
   document.getElementById('myA5').value = myCoinCost
   let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
   let myVwap24Hr =  parseFloat(myUseable.data.vwap24Hr)    
-  let myChange24percent =  parseFloat(myUseable.data.changePercent24Hr)     
+  let myChange24h =  parseFloat(myUseable.data.changePercent24Hr)   
 
-  document.getElementById('myA8').value = my24h
+
+if (my24h > 0){
+myShowVol = (parseFloat(my24h) * 100 / parseFloat(document.getElementById('myA0').value)).toFixed(2)
+myVolOut = ''
+
+  if (my24h > parseFloat(document.getElementById('myA0').value)) {
+     myVolOut = myShowVol+ '%  [' + myChange24h + ']' 
+     if (myChange24h > 1.0) { 
+       document.getElementById('myA8').style.backgroundColor = 'lime'
+       myVolOut = 'Bull Run ?? ' + myShowVol+ '%  [' + myChange24h + ']' 
+     } 
+     if (myChange24h < -1.0){ 
+        document.getElementById('myA8').style.backgroundColor = 'DeepPink'
+        myVolOut = 'Crash ?? ' + myShowVol+ '%  [' + myChange24h + ']'  
+     }
+   } else { myVolOut = myShowVol+ '%  [' + myChange24h + ']'   }
+} else {myVolOut = 'No data'}
+
+document.getElementById('myA8').value = myVolOut
+
+  
+
+ // document.getElementById('myA8').value = my24h
   document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)).toFixed(2)
   console.log('myNewData')
   console.log(myNewData)
