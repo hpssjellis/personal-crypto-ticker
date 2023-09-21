@@ -130,7 +130,7 @@ myGrab = async function(){
 
   let myCoinCost = (parseFloat(myUseable.data.priceUsd) / parseFloat(myUsdToCad)).toFixed(0)
   document.getElementById('myA5').value = myCoinCost
-  let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
+ // let my24h =  parseFloat(myUseable.data.volumeUsd24Hr)       // out[0]['total_volume']
   let myVwap24Hr =  parseFloat(myUseable.data.vwap24Hr)     volumeUsd24Hr
   let myChange24percent =  parseFloat(myUseable.data.changePercent24Hr)     
 
