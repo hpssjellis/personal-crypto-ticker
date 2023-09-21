@@ -338,9 +338,9 @@ document.getElementById('myA7').value = myAskCostA
 
 
 //Total columns
-document.getElementById('myGSum').value = parseFloat(document.getElementById('myA3').value) 
+document.getElementById('myGSum').value = parseFloat(document.getElementById('myA3').value).toFixed(2) 
 
-document.getElementById('myGProfit').value = parseFloat(myProfitA) 
+document.getElementById('myGProfit').value = parseFloat(myProfitA).toFixed(2) 
 
 document.getElementById('myGTotal').value = (  parseFloat(document.getElementById('myGSum').value) + parseFloat(document.getElementById('myGProfit').value)  ).toFixed(2)
 
