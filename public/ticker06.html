@@ -134,13 +134,14 @@ myGrab = async function(){
   let myVwap24Hr =  parseFloat(myUseable.data.vwap24Hr).toFixed(0)    
   let myChange24h =  parseFloat(myUseable.data.changePercent24Hr).toFixed(3)   
 //  let myChange24h =  -4
-       document.getElementById('myA8').style.backgroundColor = 'lime'
+      // document.getElementById('myA8').style.backgroundColor = 'lime'
 
 if (my24h > 0){
 myShowVol = (parseFloat(my24h) * 100 / parseFloat(document.getElementById('myA0').value)).toFixed(2)
 myVolOut = ''
 
   if (my24h > parseFloat(document.getElementById('myA0').value)) {
+    alert()
      myVolOut = myShowVol+ '%  [' + myChange24h + '] ' + myVwap24Hr
      if (myChange24h > 1.0) { 
        document.getElementById('myA8').style.backgroundColor = 'lime'
