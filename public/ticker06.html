@@ -140,16 +140,16 @@ myShowVol = (parseFloat(my24h) * 100 / parseFloat(document.getElementById('myA0'
 myVolOut = ''
 
   if (my24h > parseFloat(document.getElementById('myA0').value)) {
-     myVolOut = myShowVol+ '%  [' + myChange24h + ']' + myVwap24Hr
+     myVolOut = myShowVol+ '%  [' + myChange24h + '] ' + myVwap24Hr
      if (myChange24h > 1.0) { 
        document.getElementById('myA8').style.backgroundColor = 'lime'
-       myVolOut = 'Bull Run ?? ' + myShowVol+ '%  [' + myChange24h + ']' + myVwap24Hr
+       myVolOut = 'Bull Run ?? ' + myShowVol+ '%  [' + myChange24h + '] ' + myVwap24Hr
      } 
      if (myChange24h < -1.0){ 
         document.getElementById('myA8').style.backgroundColor = 'DeepPink'
-        myVolOut = 'Crash ?? ' + myShowVol+ '%  [' + myChange24h + ']' + myVwap24Hr 
+        myVolOut = 'Crash ?? ' + myShowVol+ '%  [' + myChange24h + '] ' + myVwap24Hr 
      }
-   } else { myVolOut = myShowVol+ '%  [' + myChange24h + ']' + myVwap24Hr   }
+   } else { myVolOut = myShowVol+ '%  [' + myChange24h + '] ' + myVwap24Hr   }
 } else {myVolOut = 'No data'}
 
 document.getElementById('myA8').value = myVolOut
