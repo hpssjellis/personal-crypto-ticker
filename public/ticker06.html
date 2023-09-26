@@ -74,6 +74,21 @@ Eventually this should default to $100 Canadian into each cyrptocurrency for Nov
 
 
 <script>
+
+function myCheckCost(){
+  
+}
+
+  
+function myBuy(){
+  
+}
+
+  
+function mySell(){
+  
+}
+  
 function checkAll(myOne){
 document.getElementById('myCheck').click()
 
@@ -258,9 +273,9 @@ BTC</td><td>
 <div id="myA4"></div></td><td>
 <input id="myA5" type=text size = 7  value="9308.98" onChange="checkAll('myA5')"></td><td>
 <input id="myA6" type=text size = 7  value="0.01074" onChange="checkAll('myA6')"></td><td>
-<input id="myA7" type=text size = 7  value="-99" onChange="checkAll('myA7')"></td><td>
-<input id="myA7b" type=button size = 7  value="Buy" onChange="buy('myA7')"></td><td>
-<input id="myA7c" type=button size = 7  value="Sell" onChange="sell('myA7')"></td><td>
+<input id="myA7" type=text size = 7  value="-99" onChange="myCheckCost('myA7')"></td><td>
+<input id="myA7b" type=button size = 7  value="Buy" onChange="myBuy('myA7')"></td><td>
+<input id="myA7c" type=button size = 7  value="Sell" onChange="mySell('myA7')"></td><td>
 <input READONLY  id="myA8" type=text size = 35  value="n/a" onChange="checkAll('myA8')"></td><td>
 <a href="https://coinmarketcap.com/currencies/bitcoin/">Bitcoin</a></td></tr>
 
