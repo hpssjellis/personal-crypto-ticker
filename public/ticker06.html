@@ -245,7 +245,7 @@ document.getElementById('myA8').value = myVolOut
 
 
 <table border=1 width="100%">
-<tr><td>Symbol</td><td>Concern Vol</td><td>Original #</td><td>Original Price $ </td><td>Ori. Cost $ CDN</td><td>Profit/Loss CDN</td><td>Present Price $ CDN</td><td>Ask #</td><td>Value $ CDN</td><td>Vol/Scary%  &#9651;[24H% ] vwap24Hr</td><td>Cyrpto</td></tr>
+<tr><td>Symbol</td><td>Concern Vol</td><td>Original #</td><td>Original Price $ </td><td>Ori. Cost $ CDN</td><td>Profit/Loss CDN</td><td>Present Price $ CDN</td><td>Ask #</td><td>Value $ CDN</td><td>amount</td><td>buy</td><td>sell</td><td>Vol/Scary%  &#9651;[24H% ] vwap24Hr</td><td>Cyrpto</td></tr>
 
 
 
@@ -259,6 +259,9 @@ BTC</td><td>
 <input id="myA5" type=text size = 7  value="9308.98" onChange="checkAll('myA5')"></td><td>
 <input id="myA6" type=text size = 7  value="0.01074" onChange="checkAll('myA6')"></td><td>
 <input id="myA7" type=text size = 7  value="-99" onChange="checkAll('myA7')"></td><td>
+<input id="myA7a" type=text size = 7  value="400.00" onChange="checkAll('myA7')"></td><td>
+<input id="myA7b" type=button size = 7  value="Buy" onChange="buy('myA7a')"></td><td>
+<input id="myA7c" type=button size = 7  value="Sell" onChange="sell('myA7a')"></td><td>
 <input READONLY  id="myA8" type=text size = 35  value="n/a" onChange="checkAll('myA8')"></td><td>
 <a href="https://coinmarketcap.com/currencies/bitcoin/">Bitcoin</a></td></tr>
 
