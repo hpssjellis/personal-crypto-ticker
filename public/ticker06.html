@@ -107,14 +107,19 @@ document.getElementById('myA0').value = myLocalA0
 myLocalA1 = localStorage.getItem('myStoreA1')
 if(myLocalA1 != null){
 document.getElementById('myA1').value = myLocalA1
-document.getElementById('myA6').value = myLocalA1 // just for Ask amount
 }
 myLocalA2 = localStorage.getItem('myStoreA2')
 if(myLocalA2 != null){
 document.getElementById('myA2').value = myLocalA2
 }
-
-
+myLocalA6 = localStorage.getItem('myStoreA6')
+if(myLocalA6 != null){
+document.getElementById('myA6').value = myLocalA6 // just for Ask amount
+}
+myLocalA7 = localStorage.getItem('myStoreA7')
+if(myLocalA7 != null){
+document.getElementById('myA7').value = myLocalA7 // just for Ask amount
+}
 
 
 
@@ -392,6 +397,8 @@ alert('This permanently changes the first three columns\nIf you want to reset th
 localStorage.setItem('myStoreA0', document.all.myA0.value)
 localStorage.setItem('myStoreA1', document.all.myA1.value)
 localStorage.setItem('myStoreA2', document.all.myA2.value)
+localStorage.setItem('myStoreA6', document.all.myA6.value)
+localStorage.setItem('myStoreA7', document.all.myA7.value)
 
 
 
