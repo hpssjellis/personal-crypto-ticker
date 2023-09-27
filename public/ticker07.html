@@ -129,9 +129,9 @@ if(myLocalA2 != null){
 document.getElementById('myA2').value = myLocalA2
 }
 
-myLocalA7 = localStorage.getItem('myStoreA7')
-if(myLocalA7 != null){
-document.getElementById('myA7').value = myLocalA7 // just for Ask amount
+myLocalA6 = localStorage.getItem('myStoreA6')
+if(myLocalA6 != null){
+document.getElementById('myA6').value = myLocalA6 
 }
 
 
@@ -208,67 +208,6 @@ document.getElementById('myA8').value = myVolOut
 
 
 myGrab()
-
-
-
-//https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin
-//https://api.coindesk.com/v1/
-
-//let urlA2 = 'https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=cad';
-//let urlA2 = 'https://api.coincap.io/v2/assets/bitcoin';
-
-
-//fetch(urlA2, { mode: 'no-cors'})
-//.then(res => res.json())
-//.then((out) => {
-
-//console.log(out)
-  
-//let myCoinCost = parseFloat(out[0]['current_price']).toFixed(0)  // 0 for bitcoin
-//let my24h = out[0]['total_volume']
-
-  
-
-                                                                  
-/*
-let myChange1h = out[0]['percent_change_1h']
-let myChange24h = out[0]['price_change_percentage_24h']
-let myChange7d = out[0]['percent_change_7d']
-
-if (my24h > 0){
-myShowVol = (parseFloat(my24h) * 100 / parseFloat(document.getElementById('myA0').value)).toFixed(2)
-myVolOut = ''
-
-  if (my24h > parseFloat(document.getElementById('myA0').value)) {
-     myVolOut = myShowVol+ '%  [' + myChange7d +' : '+ myChange24h +' : '+ myChange1h +']' 
-     if (myChange24h > 1.0) { 
-       document.getElementById('myA8').style.backgroundColor = 'lime'
-       myVolOut = 'Bull Run ?? ' + myShowVol+ '%  [' + myChange7d +' : '+ myChange24h +' : '+ myChange1h +']' 
-     } 
-     if (myChange24h < -1.0){ 
-        document.getElementById('myA8').style.backgroundColor = 'DeepPink'
-        myVolOut = 'Crash ?? ' + myShowVol+ '%  [' + myChange7d +' : '+ myChange24h +' : '+ myChange1h +']'  
-     }
-   } else { myVolOut = myShowVol+ '%  [' + myChange7d +' : '+ myChange24h +' : '+ myChange1h +']'   }
-} else {myVolOut = 'No data'}
-
-document.getElementById('myA8').value = myVolOut
-                                                                  
-                                                                  */
-
-//document.getElementById('myA5').value = myCoinCost
-//document.getElementById('myA7').value = (parseFloat(myCoinCost)  * parseFloat(document.getElementById('myA6').value)  ).toFixed(2)
-//document.getElementById('myCheck').click()   //do the math again until correct
-
-
-//document.getElementById('myDiv04').innerHTML =  myNewData
-
-  //    document.getElementById('myDiv04').innerHTML = JSON.stringify( myNewData, null, null)
-
-//})
-//.catch(err => { throw err });
-
-
 
 
 
@@ -391,15 +330,6 @@ document.getElementById('myGTotal').value = (  parseFloat(document.getElementByI
 
 
   
-<input type="button" value="ToDepressed?" onClick="{
-   alert('Reset your prices to the present market value\nFun to not save the amount but to leave this browser open and check hourly (click recent prices) to see how the market has changed\nMust click Store Original Amounts! if you want to keep these values')
-   document.getElementById('myA2').value =  document.getElementById('myA5').value
-
-
-   document.getElementById('showTicker').click()    // to reset prices
-
-
-}"><br><br>
 
 
 
@@ -407,13 +337,13 @@ document.getElementById('myGTotal').value = (  parseFloat(document.getElementByI
 
 
 
-<input type="button" value="Store Original Amounts!" onClick="{
+<input type="button" value="Store Data Locally" onClick="{
 alert('This permanently changes the first three columns\nIf you want to reset then load the page using your browser incognito mode to see the originals again')
 
 localStorage.setItem('myStoreA0', document.all.myA0.value)
 localStorage.setItem('myStoreA1', document.all.myA1.value)
 localStorage.setItem('myStoreA2', document.all.myA2.value)
-localStorage.setItem('myStoreA7', document.all.myA7.value)
+localStorage.setItem('myStoreA6', document.all.myA7.value)
 
 
 
