@@ -82,19 +82,19 @@ function myCheckCost(){
 
   
 function myBuy(){
-  document.getElementById('myA1').value = ( parseInt(document.getElementById('myA1').value) + parseInt(document.getElementById('myA6').value)  ).toFixed(6) 
-  document.getElementById('myA3').value = ( parseInt(document.getElementById('myA3').value) + parseInt(document.getElementById('myA7').value)  ).toFixed(2)  // some crypto different
+  document.getElementById('myA1').value = ( parsefloat(document.getElementById('myA1').value) + parseFloat(document.getElementById('myA6').value)  ).toFixed(6) 
+  document.getElementById('myA3').value = ( parsefloat(document.getElementById('myA3').value) + parsefloat(document.getElementById('myA7').value)  ).toFixed(2)  // some crypto different
   // calculate relative  price
-  document.getElementById('myA2').value =( parseInt(document.getElementById('myA3').value) / parseInt(document.getElementById('myA1').value)    ).toFixed(0) 
+  document.getElementById('myA2').value =( parsefloat(document.getElementById('myA3').value) / parsefloat(document.getElementById('myA1').value)    ).toFixed(0) 
   checkAll
 }
 
   
 function mySell(){
-  document.getElementById('myA1').value = ( parseInt(document.getElementById('myA1').value) - parseInt(document.getElementById('myA6').value)  ).toFixed(6) 
-  document.getElementById('myA3').value = ( parseInt(document.getElementById('myA3').value) - parseInt(document.getElementById('myA7').value)  ).toFixed(2)  // some crypto different
+  document.getElementById('myA1').value = ( parseFloat(document.getElementById('myA1').value) - parseFloat(document.getElementById('myA6').value)  ).toFixed(6) 
+  document.getElementById('myA3').value = ( parsefloat(document.getElementById('myA3').value) - parsefloat(document.getElementById('myA7').value)  ).toFixed(2)  // some crypto different
   // calculate relative  price
-  document.getElementById('myA2').value =( parseInt(document.getElementById('myA3').value) / parseInt(document.getElementById('myA1').value)    ).toFixed(0) 
+  document.getElementById('myA2').value =( parsefloat(document.getElementById('myA3').value) / parsefloat(document.getElementById('myA1').value)    ).toFixed(0) 
   checkAll()
 }
   
